@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="background min-h-screen flex flex-col justify-center items-center">
+    <div class="flex flex-col justify-center items-center text-center">
+        <h1 class="font-semibold  text-[30px] xl:text-[50px] text-[#F5F5F5]">
+            LAUNCHING SOON
+        </h1>
+        <div class="flex gap-3 xl:gap-6 text-[#F5F5F5] font-semibold text-[20px] mt-6">
+            <div class="flex flex-col gap-2 xl:gap-5 justify-center items-center">
+                <div
+                    class="w-16 h-16 xl:w-24 xl:h-24 rounded-full p-4 border-2 border-white flex flex-col justify-center items-center">
+                    <p id="days" class="text-2xl font-bold">00</p>
+                </div>
+                <span class="font-semibold text-xs xl:text-lg">DAYS</span>
+            </div>
+            <div class="flex flex-col gap-2 xl:gap-5 justify-center items-center">
+                <div
+                    class="w-16 h-16 xl:w-24 xl:h-24 rounded-full p-4 border-2 border-white flex flex-col justify-center items-center">
+                    <p id="hours" class="text-2xl font-bold">00</p>
+                </div>
+                <span class="font-semibold text-xs xl:text-lg">HOURS</span>
+            </div>
+            <div class="flex flex-col gap-2 xl:gap-5 justify-center items-center">
+                <div
+                    class="w-16 h-16 xl:w-24 xl:h-24 rounded-full p-4 border-2 border-white flex flex-col justify-center items-center">
+                    <p id="minutes" class="text-2xl font-bold">00</p>
+                </div>
+                <span class="font-semibold text-xs xl:text-lg">MINUTES</span>
+            </div>
+            <div class="flex flex-col gap-2 xl:gap-5 justify-center items-center">
+                <div
+                    class="w-16 h-16 xl:w-24 xl:h-24 rounded-full p-4 border-2 border-white flex flex-col justify-center items-center">
+                    <p id="seconds" class="text-2xl font-bold">00</p>
+                </div>
+                <span class="font-semibold text-xs xl:text-lg">SECONDS</span>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center mt-6">
+        <div class="flex space-x-6">
+            <a href="https://www.facebook.com/share/1FjQuLMKbn/" target="_blank"
+                class="text-[#F5F5F5] text-[22px] hover:text-blue-600">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://x.com/StmUsman" target="_blank" class="text-[#F5F5F5] text-[22px] hover:text-blue-400">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="http://Instagram.com/stm_usman" target="_blank"
+                class="text-[#F5F5F5] text-[22px] hover:text-pink-500">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com/yourprofile" target="_blank"
+                class="text-[#F5F5F5] text-[22px] hover:text-blue-600">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/stm-usman" target="_blank"
+                class="text-[#F5F5F5] text-[22px] hover:text-blue-700">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+    <script>
+        var countDownDate = new Date("Apr 20, 2025 00:00:00").getTime();
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            if (distance < 0) {
+                clearInterval(x);
+                days = hours = minutes = seconds = 0;
+            }
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+        }, 1000);
+    </script>
+</body>
+
+
+</html>
