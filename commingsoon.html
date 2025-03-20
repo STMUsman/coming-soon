@@ -5,16 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
-    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <script src="script.js"></script>
+
+    
+
+    <style>
+        .background {
+            background-image: url(Assets/6205248.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .jost-heading {
+            font-family: 'Jost', sans-serif;
+            font-optical-sizing: auto;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1,
+        p,
+        span {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
 
 <body class="background min-h-screen flex flex-col justify-center items-center">
@@ -55,14 +84,14 @@
     </div>
     <div class="flex justify-center mt-6">
         <div class="flex space-x-6">
-            <a href="" target="_blank"
+            <a href="https://www.facebook.com/share/1FjQuLMKbn/" target="_blank"
                 class="text-[#F5F5F5] text-[22px] hover:text-blue-600">
                 <i class="fab fa-facebook"></i>
             </a>
-            <a href="" target="_blank" class="text-[#F5F5F5] text-[22px] hover:text-blue-400">
+            <a href="https://x.com/StmUsman" target="_blank" class="text-[#F5F5F5] text-[22px] hover:text-blue-400">
                 <i class="fab fa-twitter"></i>
             </a>
-            <a href="" target="_blank"
+            <a href="http://Instagram.com/stm_usman" target="_blank"
                 class="text-[#F5F5F5] text-[22px] hover:text-pink-500">
                 <i class="fab fa-instagram"></i>
             </a>
@@ -70,31 +99,13 @@
                 class="text-[#F5F5F5] text-[22px] hover:text-blue-600">
                 <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="" target="_blank"
+            <a href="https://www.linkedin.com/in/stm-usman" target="_blank"
                 class="text-[#F5F5F5] text-[22px] hover:text-blue-700">
                 <i class="fab fa-linkedin"></i>
             </a>
         </div>
     </div>
-    <script>
-        var countDownDate = new Date("Apr 20, 2025 00:00:00").getTime();
-        var x = setInterval(function () {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            if (distance < 0) {
-                clearInterval(x);
-                days = hours = minutes = seconds = 0;
-            }
-            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
-        }, 1000);
-    </script>
+
 </body>
 
 
